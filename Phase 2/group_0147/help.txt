@@ -1,0 +1,30 @@
+The first step is to run Simulation.java from the command line.
+Simulation.java takes input from events.txt, which you can open next.
+Running Simulation.java runs all actions found in events.txt.
+Examples of commands and their format is found in events.txt, with a description above each command.
+For example, the first command in events.txt is the creation of the Store, named Sam's Market.
+The second command is the creation of a Receiver named Amy.
+Other users are added, such as the Cashier, the Manager and the Reshelver.
+Each of these users have access to different commands within the Grocery Store.
+For example, our initial inventory is then set up by calling in the Receiver who scans in various items.
+Since this is the initial set-up of our inventory, notice Order Number has been set to 0.
+Any further orders then increase the Order Number by 1.
+The different commands of each user have specific formats in order to be called.
+In our events.txt, we have given several examples of each command to clarify their specific format.
+For example, as seen when setting up our initial inventory, in order to add a product to inventory,
+a Receiver is called to scan in the product.
+Another example is in order to know where an item is located, a Reshelver is called to get the
+location of a Carrot is given.
+All different kinds of commands and how they are called can be found in events.txt.
+Therefore, to get specific information, different commands are called.
+For each example command we have given, we have also given descriptions above each of them for
+guidance on how to inquire about specific information regarding the grocery store.
+Take note that in our program, our program references the UPCs of products to refer to specific products.
+Once you understand the formats of the commands via the examples given, you are now ready to add
+your own commands!
+To add your own commands, append and write them to events.txt, following the format of previous examples.
+To run your newly added commands, run Simulation.java from the command line.
+Depending on the events you have run, information within the store will be updated and
+information about the store may also be printed.
+You may continue to add more commands as you wish--just run Simulation.java from the command line
+in order to run any new commands.

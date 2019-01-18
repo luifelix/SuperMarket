@@ -1,0 +1,42 @@
+Store, construct, Sam's Market
+Receiver, construct, Amy
+Manager, construct, Bob
+Reshelver, construct, Cat
+Cashier, construct, Douglas
+Receiver, scan, 0, Chocolate chip cookie, 30, 1.25, 0.52, Snacks, Cookies, 0000001
+Receiver, scan, 0, White macadamia cookie, 10, 1.25, 0.52, Snacks, Cookies, 0000002
+Receiver, scan, 0, Sun chips, 50, 1.45, 0.60, Snacks, Chips, 0000003
+Receiver, scan, 0, Apple, 50, 0.89, 0.33, Produce, Fruits, 0000004
+Receiver, scan, 0, Orange, 15, 0.76, 0.21, Produce, Fruits, 0000005
+Receiver, scan, 0, Carrot, 40, 0.54, 0.11, Produce, Vegetables, 0000006
+Receiver, scan, 0, Coke, 100, 2.10, 0.99, Drinks, Soda, 0000007
+Receiver, scan, 0, Orange juice, 10, 3.99, 1.99, Drinks, Juices, 0000008
+Reshelver, setSectionAisle, Snacks, 1
+Reshelver, setSectionAisle, Produce, 2
+Reshelver, setAisle, 0000006, 3
+Reshelver, location, 0000006
+Reshelver, setSectionAisle, Drinks, 4
+Cashier, cscan, 0000002
+Cashier, cscan, 0000008
+Manager, pendingOrder
+Receiver, scan, 1, White macadamia cookie, 30, 1.25, 0.52, Snacks, Cookies, 0000002
+Reshelver, currentQuantity, 0000002
+Manager, backOrderProducts
+Product, setSale, 0000008, 2.99, 2017/07/25, 2017/07/28
+Product, setSale, 0000007, 0.99, 2017/07/26, 2017/07/29
+Product, putOnSale, 0000008
+Product, putOnSale, 0000007
+Product, onSale, 0000008
+Product, onSale, 0000007
+Product, takeOffSale, 0000008
+Product, takeOffSale, 0000007
+Product, onSale, 0000008
+Product, onSale, 0000007
+Receiver, priceHistory, 0000008
+Product, setThreshold, 0000005, 15
+Cashier, cscan, 0000005
+Manager, backOrderProducts
+Cashier, manualOrder, 0000002, 50
+Reshelver, orderHistory, 0000002
+Manager, revenue, Jul 24, 2017
+Manager, profit, Jul 24, 2017

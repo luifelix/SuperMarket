@@ -1,0 +1,116 @@
+//Constructed initial store
+Store, construct, Sam's Market
+//Constructed Receiver named Amy
+Receiver, construct, Amy
+//Constructed Manager named Bob
+Manager, construct, Bob
+//Constructed Reshelver named Cat
+Reshelver, construct, Cat
+//Constructed Cashier named Douglas
+Cashier, construct, Douglas
+//Initial inventory set up
+//Called receiver to scan each product in the following format
+//Receiver, scan, OrderNumber (set initially to 0), Name of product,Quantity of product, Price of product,
+//Cost to order product, Section of product, Subsection of product, UPC of product
+Receiver, scan, 0, Chocolate chip cookie, 30, 1.25, 0.52, Snacks, Cookies, 0000001
+//Scanned 8 following items into initial inventory following above format
+Receiver, scan, 0, White macadamia cookie, 10, 1.25, 0.52, Snacks, Cookies, 0000002
+Receiver, scan, 0, Sun chips, 50, 1.45, 0.60, Snacks, Chips, 0000003
+Receiver, scan, 0, Apple, 50, 0.89, 0.33, Produce, Fruits, 0000004
+Receiver, scan, 0, Orange, 15, 0.76, 0.21, Produce, Fruits, 0000005
+Receiver, scan, 0, Carrot, 40, 0.54, 0.11, Produce, Vegetables, 0000006
+Receiver, scan, 0, Coke, 100, 2.10, 0.99, Drinks, Soda, 0000007
+Receiver, scan, 0, Orange juice, 10, 3.99, 1.99, Drinks, Juices, 0000008
+//Called reshelver to set aisle of Snacks section to aisle 1
+//Following format of Reshelver, setSectionAisle, Section to set aisle to, Aisle
+Reshelver, setSectionAisle, Snacks, 1
+//Called reshelver to set Produce aisle following above format
+Reshelver, setSectionAisle, Produce, 2
+//Called Reshelver to set aisle of Carrot to 3
+//Referenced Carrot using UPC code
+//Followed format of Reshelver, setAisle, UPC, Aisle
+Reshelver, setAisle, 0000006, 3
+//Called Receiver to find location of Carrot using format
+//Receiver, location, UPC of Product to locate
+Receiver, location, 0000006
+//Called Reshelver to set Aisle of Drinks
+Reshelver, setSectionAisle, Drinks, 4
+//Called Cashier to scan White macadamia cookie that has been bought
+//Following format Cashier, cscan, UPC of Product to scan out
+//White macadamia now under default threshold of 10, automatic order has been sent out
+Cashier, cscan, 0000002
+//Called cashier to scan Orange juice following above format
+Cashier, cscan, 0000008
+//Called Reshelver scan damaged product out of system
+Reshelver, damaged, 0000006
+//Called manager to bring up list of pending orders using following format
+//Manager, pendingOrder
+Manager, pendingOrder
+//Called receiver to scan the received order of White macadamia cookie following format
+//Receiver, scan, OrderNumber, Name, Quantity, Price, Cost to order, Section, Subsection, UPC
+Receiver, scan, 1, White macadamia cookie, 30, 1.25, 0.52, Snacks, Cookies, 0000002
+//Called reshelver to check current quantity of White macadamia cookie to confirm received order updated quantity
+//Following format Reshelver, currentQuantity, UPC of product to check quantity of
+Reshelver, currentQuantity, 0000002
+//Called manager to create list of back order products
+//Using format Manager, backOrderProducts
+Manager, backOrderProducts
+//Set the following products to sale using the following format
+//Product, setSale, UPC of product to put on sale, Sale price, sale Start date, sale End dater
+Product, setSale, 0000008, 2.99, 2017/07/25, 2017/07/28
+Product, setSale, 0000007, 0.99, 2017/07/26, 2017/07/29
+//Put the following products on sale using the following format
+//Product, putOnSale, UPC
+Product, putOnSale, 0000008
+Product, putOnSale, 0000007
+//Called Cashier to check whether each of the following products were on sale
+//Using format Cashier, checkOnSale, UPC of product to check on sale
+Cashier, checkOnSale, 0000008
+Cashier, checkOnSale, 0000007
+//Took the following products off of sale using the following format
+//Product, takeOffSale, UPC of product to take off sale
+Product, takeOffSale, 0000008
+Product, takeOffSale, 0000007
+//Called Cashier to check whether products were still on sale after being taken off
+//Returned false
+Cashier, checkOnSale, 0000008
+Cashier, checkOnSale, 0000007
+//Called receiver to check price history of Orange Juice
+//Using format of Receiver, priceHistory, and UPC of product to check Price History of
+Receiver, priceHistory, 0000008
+//Changed threshold of Orange from default using the following format
+//Product, setThreshold, UPC of product to change threshold of, new threshold number
+Product, setThreshold, 0000005, 15
+//Called Cashier scans the orange from before using the UPC and using the following
+// format Cashier, cscan, UPC of the orange
+Cashier, cscan, 0000005
+//Called Manager to list backOrderProducts using the following format
+// Manager, backOrderProducts
+Manager, backOrderProducts
+//Called Cashier to create a manual order of White macadamia cookie with the following
+//format Cashier, manual order, UPC of White macadamia cookie and quantity of 50
+Cashier, manualOrder, 0000002, 50
+//Called Reshelver to check the order history of White macadamia cookie with the following
+//format Reshelver, orderHistory, UPC of White Macadamia cookie
+Reshelver, orderHistory, 0000002
+//Called Manager to check the revenue given a date
+Manager, revenue, Jul 27, 2017
+//Called Manager to check the profit given a date
+Manager, profit, Jul 27, 2017
+//Called Receiver to check price of product
+//Using format Receiver, checkCurrPrice, UPC of product to check on sale
+Receiver, checkCurrPrice, 0000007
+//Called Manager to check last order of product
+//Using format Manager, getLastOrder, 0000002
+Manager, getLastOrder, 0000002
+//Called Manager to generate text file of all Products in stock
+//Using the format Manager, inStock, text file will be called ProductsinStock
+Manager, inStock
+//Checked section and subsection of Product
+//Using the format Product, getSection, UPC of product to check section of
+Product, getSection, 0000008
+//Called Receiver to check cost of Product in store
+//Using the format Receiver, checkCost, UPC of product to check cost of
+Receiver, checkCost, 0000005
+//Called Reshelver scan damaged product out of system
+Reshelver, damaged, 0000004

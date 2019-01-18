@@ -1,0 +1,37 @@
+Received order #0
+Received order #0
+Received order #0
+Received order #0
+Received order #0
+Received order #0
+Received order #0
+Received order #0
+Grouped Snacks in aisle 1
+Grouped Produce in aisle 2
+Put Carrot in aisle 3
+Carrot is in aisle 3
+Grouped Drinks in aisle 4
+Took out one White macadamia cookie from the inventory
+Took out one Orange juice from the inventory
+Pending order(s): print to screen
+Received order #1
+Current quantity of White macadamia cookie = 39
+Created list of all backorder products
+Set Orange juice to sale starting from 2017/07/25 to 2017/07/28
+Set Coke to sale starting from 2017/07/26 to 2017/07/29
+Put Orange juice on sale
+Put Coke on sale
+Orange juice on sale? true
+Coke on sale? true
+Took Orange juice off sale
+Took Coke off sale
+Orange juice on sale? false
+Coke on sale? false
+Price history of Orange juice print to screen
+New threshold of Orange = 15
+Took out one Orange from the inventory
+Created list of all backorder products
+Order of 50 White macadamia cookie sent manually
+Order history of White macadamia cookie print to screen
+The total revenue of Jul 24 2017 = $6.0
+The total profit of Jul 24 2017 = $3.2800000000000002
